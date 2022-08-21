@@ -1,0 +1,89 @@
+<?php
+require('top.php');
+?>
+
+<div class="body1 font-poppin bg-gra-01 p-t-100 p-d-180px ">
+  <div class="wrapper wrapper--w780 p-d-20"> 
+    <div class="card card-3">
+        
+        <div class="card-body">
+        <h2>Vehical Registation</h2>
+            <form action="update_vehical.php" method="post" enctype="multipart/form-data">
+                <div class="input-group">                      
+                    <input class="form-control" placeholder="Vehical Make" type="text" name="vehical_make" required>
+  	            </div>
+                  <div class="input-group">
+                    
+                    <input class="form-control" placeholder="Vehical Model" type="text" name="vehical_model" required>
+  	            </div>
+                  <div class="input-group">
+                    
+                    <input class="form-control" placeholder="Vehical Manufacured Year" type="text" name="vehical_year" required>
+  	            </div>
+                  <div class="input-group">
+                    
+                    <input class="form-control" placeholder="Number Plate" type="text" name="vehical_number" required>
+  	            </div>
+                  <div class="input-group">
+                    
+                    <input class="form-control" placeholder="Number of Seats" type="int" name="number_of_seats" required>
+  	            </div>
+                  <div class="input-group">
+                   
+                    <input class="form-control" placeholder="Chasie Number" type="text" name="vehical_chasie_number" required>
+  	            </div>
+                  <div class="input-group">
+                    
+                    <input class="form-control" placeholder="Insurance provider" type="text" name="vehical_insurance_provider" required>
+  	            </div>
+                <div class="input-group">
+                    
+                    <input class="form-control" placeholder="Insurance policy number" type="text" name="vehical_insurance_policy_number" required>
+  	            </div>
+
+                  <div class="input-group">
+                  <a> Front Image of Vehical</a>
+                    <input class="form-control" type="file" name="vehical_front_image" required>
+                    <?php if(isset($_GET['error'])):
+                    ?>
+                        <p><?php echo $_GET['error']; ?> </p>
+                    <?php endif ?>
+  	            </div>
+
+                <div class="input-group">
+                <a> Left Side Image of Vehical</a>
+                    <input class="form-control" type="file" name="vehical_leftside_image" required>
+                    <?php if(isset($_GET['error'])):
+                    ?>
+                        <p><?php echo $_GET['error']; ?> </p>
+                    <?php endif ?>
+  	            </div>
+                
+                <div class="input-group">
+                <a> Right Side Image of Vehical</a>
+                    <input class="form-control" type="file" name="vehical_rightside_image" required>
+                    <?php if(isset($_GET['error'])):
+                    ?>
+                        <p><?php echo $_GET['error']; ?> </p>
+                    <?php endif ?>
+  	            </div>
+                
+                <div class="input-group">
+                <a> Rear Image of Vehical</a>
+                    <input class="form-control" type="file" name="vehical_rear_image" required>
+                    <?php if(isset($_GET['error'])):
+                    ?>
+                        <p><?php echo $_GET['error']; ?> </p>
+                    <?php endif ?>
+  	            </div>
+                  <div class="input-group">
+                    
+                    <input class="form-control" placeholder="Color of Vehical" type="text" name="vehical_color" required>
+                    </div>
+                 <input class="btn submit" type="submit" name="create" value="Register">
+
+            </form>
+
+        </div>
+    </div>
+</div>

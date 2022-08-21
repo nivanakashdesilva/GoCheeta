@@ -1,13 +1,5 @@
 <?php
 require('top.php');
-require('connection.php');
-require('functions.php');
-
-$sql="select * from driver";
-$res=mysqli_query($conn,$sql);
-
-
-
 ?>
 
 <div class="body">

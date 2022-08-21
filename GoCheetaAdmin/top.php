@@ -1,3 +1,24 @@
+<?php
+require('connection.php');
+require('functions.php');
+include('errors.php');
+	
+	if (!isset($_SESSION['username'])) {
+		$_SESSION['msg'] = "You have to log in first";
+		header('location: login.php');
+	}
+
+	
+	if (isset($_GET['logout'])) {
+		session_destroy();
+		unset($_SESSION['username']);
+		header("location: login.php");
+	}
+
+?>
+
+
+
 <!doctype html>
 <html class="no-js" lang="">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -14,16 +35,24 @@
 
 <body>
     <div id="mySidenav" class="sidenav">
+        <p>Welcome <?php echo $_SESSION['username']; ?></p>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <div class="logout">
+            <a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i>Logout</a>
+        </div>
+        <a href="home.php">Home</a>
+        <a href="add_admin.php">Admin</a>
+        <a href="add_branch.php">Branch</a>
+        <a href="add_driver.php">Driver</a>
+        <a href="add_vehical.php">Vehical</a>
+        <a href="add_vehical_category.php">Vehical Category</a>
+       
     </div>
 
     <div class="main" id="main">
        
             <h1>Go<span>Cheeta</span> Admin </h1>
+            
             <div class="nav">
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
             </div>
