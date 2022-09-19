@@ -106,5 +106,5 @@ if (isset($_POST['create']) && isset($_FILES['vehical_front_image']) && isset($_
 
 }
 else {
-    header("location:add_driver.php");
+    header("location:vehical.php");
 };

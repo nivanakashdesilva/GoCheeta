@@ -63,6 +63,7 @@ body {
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+    .sidenav p {font-size: 20px; padding-top: 10px;}
   }
   .main h1 span{
     color: #FDB940;
@@ -400,4 +401,7 @@ select:-webkit-autofill:focus {
 
 #menuToggle2 {
   padding-left: 25px
+}
+h2.header-wrap-table{
+  color: #49a342;
 }

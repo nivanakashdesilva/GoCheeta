@@ -119,11 +119,7 @@ $res=mysqli_query($conn,$sql);
                 <td> <?php echo $row['vehical_year'] ?> </td>
                 <td> <?php echo $row['vehical_number'] ?> </td>
                 <td> <?php echo $row['number_of_seats'] ?> </td>
-                <td>
-                  <form action="" method="post">
-                    <input type="hidden" name="edit_id" value="">
-                    <button  type="submit" name="view_btn" class="btn btn-primary"> VIEW</button>
-                  </form>
+                <td><a class='btn btn-primary' href="view_vehical_detail.php?id=<?php echo $row['id'];?>">VIEW</a>
                 </td>
                 <td><a class='btn btn-success' href="update_vehical_detail.php?id=<?php echo $row['id'];?>">Update</a>
                   

@@ -49,14 +49,7 @@ include('errors.php');
        
     </div>
 
-    <div class="main" id="main">
-       
-            <h1>Go<span>Cheeta</span> Admin </h1>
-            
-            <div class="nav">
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-            </div>
-    </div>
+  
 
 </body>
 

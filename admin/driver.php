@@ -119,11 +119,7 @@ $res=mysqli_query($conn,$sql);
                 <td> <?php echo $row['nic'] ?> </td>
                 <td> <?php echo $row['mobile_number'] ?> </td>
                 <td> <?php echo $row['username'] ?> </td>
-                <td>
-                  <form action="" method="post">
-                    <input type="hidden" name="edit_id" value="">
-                    <button  type="submit" name="view_btn" class="btn btn-primary"> VIEW</button>
-                  </form>
+                <td><a class='btn btn-primary' href="view_driver.php?id=<?php echo $row['id'];?>">VIEW</a>
                 </td>
                 <td><a class='btn btn-success' href="update_driver_detail.php?id=<?php echo $row['id'];?>">Update</a>
 

@@ -61,13 +61,13 @@ if (isset($_POST['create']) && isset($_FILES['vehical_front_image']) && isset($_
             $front_img_ex_lc=strtolower($front_img_ex);
 
             $leftside_img_ex=pathinfo($leftside_img_name, PATHINFO_EXTENSION);
-            $leftside_img_ex_lc=strtolower($img_ex);
+            $leftside_img_ex_lc=strtolower($leftside_img_ex);
 
             $rightside_img_ex=pathinfo($rightside_img_name, PATHINFO_EXTENSION);
             $rightside_img_ex_lc=strtolower($rightside_img_ex);
 
             $rear_img_ex=pathinfo($rear_img_name, PATHINFO_EXTENSION);
-            $rear_img_ex_lc=strtolower($rear_leftside_img_ex);
+            $rear_img_ex_lc=strtolower($rear_img_ex);
 
 
             $allow_exs= array("jpg", "jpeg", "png");
